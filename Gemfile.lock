@@ -165,7 +165,6 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
-    pg (0.17.1)
     polyamorous (0.6.4)
       activerecord (>= 3.0)
     polyglot (0.3.5)
@@ -301,6 +300,8 @@ GEM
     turbo-sprockets-rails3 (0.3.14)
       railties (> 3.2.8, < 4.0.0)
       sprockets (>= 2.2.0)
+    turbolinks (2.3.0)
+      coffee-rails
     tzinfo (0.3.41)
     uglifier (2.5.3)
       execjs (>= 0.3.0)
@@ -315,8 +316,6 @@ GEM
     will_paginate (3.0.7)
     xpath (2.0.0)
       nokogiri (~> 1.3)
-    zeus (0.15.1)
-      method_source (>= 0.6.7)
 
 PLATFORMS
   ruby
@@ -352,7 +351,6 @@ DEPENDENCIES
   nokogiri
   paper_trail (~> 2.7.0)
   paperclip
-  pg
   premailer
   pry-rails
   quiet_assets
@@ -372,13 +370,14 @@ DEPENDENCIES
   select2-rails
   selenium-webdriver
   simple_form (~> 2.0.1)
+  sqlite3
   therubyracer
   thin
   thor
   timecop
   turbo-sprockets-rails3
+  turbolinks
   uglifier (>= 1.0.3)
   unicorn
   valium
   will_paginate
-  zeus

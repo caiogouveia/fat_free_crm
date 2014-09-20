@@ -1,5 +1,11 @@
 ---
 pt-BR:
+  to_xls: Salvar em XLS
+  to_csv: Salvar em CSV
+  to_rss: Feed RSS
+  to_atom: Feed ATOM
+  to_perm: Ligação Permanente
+  entities_per_page: Itens por página
   language: Português do Brasil
   all: Tudo
   at: at
@@ -7,6 +13,70 @@ pt-BR:
   no_button: Não
   not_implemented: Ainda não implementado.
   or: ou
+  #contas
+  street1: 'Rua #1'
+  street2: 'Rua #2'
+  select_a_country: Selecione um País
+  select_a_campaign: Selecione uma campanha
+  #contas fim
+  #admin
+  admin_tab_tags: Editar Etiquetas
+  admin_tab_fields: Campos Customizados
+  admin_tab_groups: Grupos de Usuários
+  groups: Grupos de Usuários
+  group_members: Menbros do Grupo
+  custom_fields: Campos Customizados
+  create_group: Criar Grupo
+  admin_fields_info: Custom fields are displayed in groups. Create a new field group, or add fields to one of the groups below. You can drag and drop fields to change their display order or move them between field groups.
+  admin_fields_info2: Reinicie seu servidor, depois de adcionar campos customizados
+  create_field_group: Criar Grupo de campos
+  create_field: Criar Campo
+  field_group_empty: Grupo de campos vazio
+  field_group_unrestricted: não restrito
+  field_labels: Nome do Campo
+  field_types: Tipo do Campo
+  tags: Etiquetas
+  create_tag: Criar Etiqueta
+  #admin fim
+  #Tab Campanhas
+  select_lead: Selecione Lead
+  campaign_statuses: Estado das Campanhas
+  expand_all: expandir todos
+  collapse_all: esconder todos
+  added_note: Nota adicionada
+  versions: versões
+  #Tab Campanhas fim
+  #Tab Contas
+  account_summary: Sumário
+  select_task: Selecionar Tarefa
+  select_contact: Selecionar Contato
+  select_opportunity: Selecionar Oportunidade
+  select_or_create_tags: Tags
+  account_categories: Categorias de Contas
+  affiliate: Afiliado
+  competitor: Competidor
+  customer: Cliente
+  partner: Parceiro
+  reseller: Re-vendedor
+  vendor: Vendedor
+  total_accounts: Total de Contas
+  #Tab Contas Final
+  lead_statuses: Estado dos Leads
+  unassigned: Não Selecionado
+  search: Buscar
+  basic_search: Busca
+  advanced_search: Busca Avançada
+  search_results_count: encontrados
+  create_a_new: Criar Novo 
+  my_tasks: Minhas Tarefas
+  no_task_records: Nenhuma Tarefa
+  my_opportunities: Minhas Oportunidade
+  no_opportunity_records: Nenhuma Oportunidades
+  my_accounts: Minhas Contas de Clientes
+  no_account_records: Nenhuma Conta
+  global_lists: Lista Global
+  personal_lists: Lista Pessoal
+  no_saved_lists: Nenhuma lista
   select_blank: -- Selecione --
   select_none: -- Nenhum --
   yes_button: Sim
@@ -16,7 +86,9 @@ pt-BR:
   tab_leads: Leads
   tab_accounts: Contas
   tab_contacts: Contatos
+  tab_team: Time
   tab_opportunities: Oportunidades
+  no_opportunities_found: Nenhuma Oportunidade encontrada
   admin_tab_users: Usuários
   admin_tab_settings: Configurações
   admin_tab_plugins: Plugins
@@ -24,7 +96,7 @@ pt-BR:
   started: Iniciado
   on_hold: Em espera
   completed: Terminado
-  called_off: Called Off
+  called_off: Cancelado
   new: Novo
   contacted: Contactado
   converted: Convertido
@@ -52,7 +124,7 @@ pt-BR:
   meeting: Encontro
   money: Dinheiro
   trip: Viagem
-  overdue: Overdue
+  overdue: Atrasado
   due_asap: Assim que possível
   due_today: Hoje
   due_tomorrow: Amanhã
@@ -262,7 +334,7 @@ pt-BR:
   mobile_small: celular
   open_in_window: Abrir %{value} em uma nova janela
   phone_small: telefone
-  phone_toll_free: Toll-free phone
+  phone_toll_free: Telefone Gratuito
   keep_private: manter privado, não compartilhar com os outros
   make_public: Compartilhar com todos
   same_as_billing: mesmo da cobrança
@@ -277,8 +349,8 @@ pt-BR:
   campaign: Campanha
   campaign_and_leads: campanha e seus leads
   campaign_small: campanha
-  campaign_summary: Campaign Summary
-  campaign_targets: Campaign Targets
+  campaign_summary: Sumário da Campanha
+  campaign_targets: Alvos da Campanha
   campaigns: Campanhas
   campaigns_options: Campaigns Options
   campaigns_small: campanhas
@@ -334,8 +406,8 @@ pt-BR:
   referred_by_small: referred by
   save_contact: Salvar contato
   twitter: Twitter
-  web_presence: Web Presence
-  web_presence_small: web presence
+  web_presence: Presença na Internet
+  web_presence_small: presença na web
   works_at: ! '%{job_title} na %{company}'
   convert: Converter
   convert_lead: Converter lead
@@ -364,7 +436,7 @@ pt-BR:
   leads_options: Opções de Lead
   leads_small: leads
   none: Nenhum
-  rating: Rating
+  rating: Nota
   reject: Rejeitar
   reject_lead_confirm: Tem certeza que deseja rejeitar este lead?
   save_lead: Salvar lead
@@ -384,7 +456,7 @@ pt-BR:
   discount_number: com %{value} desconto
   expected_to_close: expected to close in %{time} on %{date}
   from: from
-  no_closing_date: no expected closing date
+  no_closing_date: Sem data de fechamento
   no_discount: sem desconto
   opportunities: Oportunidades
   opportunities_options: Opportunities Options
@@ -427,9 +499,9 @@ pt-BR:
   task_completed_ago: terminada há %{value} atrás
   task_completed_by: terminada há %{time_ago} atrás por %{user}
   task_created: A tarea foi criada
-  task_due_in: due in %{value}
+  task_due_in: em %{value}
   task_due_later: due sometime soon
-  task_due_now: vende
+  task_due_now: agora
   task_due_today: due today
   task_from: de %{value}
   task_overdue: late, was due on
@@ -462,8 +534,8 @@ pt-BR:
   add_note: Adicionar nota
   save_note: Salvar nota
   add_note_help: Adicionar nova nota...
-  added_ago: adicionado(a) há %{value} atrás
-  added_by: adicionado(a) há %{time_ago} atrás por %{user}
+  added_ago: adicionado(a) %{value} atrás
+  added_by: adicionado(a) %{time_ago} atrás por %{user}
   back: Voltar
   cancel: Cancelar
   close_form: Fechar formulário
@@ -474,7 +546,7 @@ pt-BR:
   create_new: cria um(a) novo(a)
   select_existing: selecione existentes
   delete: Remover
-  discard: Discard
+  discard: Descartar
   edit: Editar
   items_total: ! '%{count} total.'
   less: Menos...
@@ -489,10 +561,10 @@ pt-BR:
   please_retry: favor tente outra consulta.
   recent_items: Itens recentes
   search_assets: Buscar %{value}
-  time_ago: há %{value} atrás
+  time_ago: -- %{value} atrás
   background_info: Informações gerais
   address: Endereço
-  city: Ciudade
+  city: Cidade
   zipcode: CEP
   state: Membro/Região
   country: Campo

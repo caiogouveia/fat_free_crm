@@ -91,7 +91,8 @@ module ApplicationHelper
     link_to(text,
       url + "#{url.include?('?') ? '&' : '?'}cancel=false" + related,
       :remote => true,
-      :onclick => "this.href = this.href.replace(/cancel=(true|false)/,'cancel='+ ($('##{id}').css('display') != 'none'));",
+      :data => { no_turbolink: true },
+      # :onclick => "this.href = this.href.replace(/cancel=(true|false)/,'cancel='+ ($('##{id}').css('display','block') != 'none'));",
       :class => options[:class]
     )
   end
@@ -515,5 +516,8 @@ module ApplicationHelper
     options = { renderer: RemoteLinkPaginationHelper::LinkRenderer }.merge(options)
     will_paginate(collection, options)
   end
-
+  
+  def page_title(title)
+    title.to_s.capitalize
+  end
 end
