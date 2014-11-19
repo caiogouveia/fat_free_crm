@@ -3,40 +3,60 @@
 // Fat Free CRM is freely distributable under the terms of MIT license.
 // See MIT-LICENSE file or http://www.opensource.org/licenses/mit-license.php
 //------------------------------------------------------------------------------
+$verdeAmanda: rgba(186,209,71,1.0);
 $color_header: skyblue;
 $color_header_background: #1e4262;
 $color_logo: greenyellow;
 $color_tab: white;
 $color_tab_background: #466bb1;
-$color_active_tab: black;
-$color_active_tab_background: #E5E5E5;
+$color_active_tab: $verdeAmanda;
+$color_active_tab_background: white;//#E5E5E5;
 $color_hover_tab: navy;
 $color_hover_tab_background: #97baff;
-$size_tab_height: 26px;
+$size_tab_height: 35px;
 $size_tab_width: 80px;
 $color_footer: grey;
+
+@mixin clearfix {
+  // overflow: auto;
+  zoom: 1;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
 
 // Header, tabs, and footer.
 //------------------------------------------------------------------------------
 #header {
-  background: $color_header_background;
-  color: $color_header;
+  background: $verdeAmanda;
+  // color: $color_header;
   padding: 8px 16px 8px 16px;
+  // height: 50px;
+  @include clearfix;
   h3 a {
-    background: $color_header_background;
-    color: $color_logo;
-    font: normal 15px "Lucida Grande", Arial, Helvetica, sans-serif;
-    text-decoration: none; }
+    color: white;
+    font-size: 20px;
+    text-decoration: none; 
+    padding-left: 15px;
+    &:hover{
+      background: none;
+    }
+  }
   #welcome {
     float: right;
-    font-size: 11px;
+    font-size: 14px;
+    color:darken($verdeAmanda,20);
     a {
-      color: lightyellow;
+      color: white;
       padding: 1px 4px 2px 4px;
       text-decoration: none;
       &:hover {
-        background: $color_header_background;
-        color: yellow; } }
+        background: none;
+        color:darken($verdeAmanda,30);
+        }
+    }
     a.selected {
       background: steelblue;
       color: lightyellow;
@@ -71,8 +91,8 @@ $color_footer: grey;
       margin: 2px 0px 0px 0px; } } }
 
 .tabs {
-  background: $color_header_background;
-  height: $size_tab_height;
+  @include clearfix;
+  background: $verdeAmanda;
   padding: 0px;
   text-align: center;
   width: 100%;
@@ -94,25 +114,31 @@ $color_footer: grey;
       vertical-align: bottom;
       float: none;
       margin-right: 7px; }
-    background: $color_tab_background;
     color: white;
     float: left;
-    padding: 4px 15px 6px;
+    
+    padding: 11px 15px 11px;
     text-align: center;
     text-decoration: none;
+    
     -moz-border-radius: {
       topleft: 3px;
       topright: 3px; };
     -webkit-border-top: {
       left-radius: 3px;
-      right-radius: 3px; }; }
+      right-radius: 3px; };
+    }
   a:hover {
-    background: $color_hover_tab_background;
-    color: $color_hover_tab; }
+    background:darken($verdeAmanda,10);
+    color:white;
+
+  }
   a:link.active, a:visited.active {
     background: $color_active_tab_background;
     color: $color_active_tab;
-    text-decoration: none; } }
+    text-decoration: none; 
+  }
+}
 
 #footer {
   color: $color_footer;

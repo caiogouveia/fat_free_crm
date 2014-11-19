@@ -3,23 +3,29 @@
 // Fat Free CRM is freely distributable under the terms of MIT license.
 // See MIT-LICENSE file or http://www.opensource.org/licenses/mit-license.php
 //------------------------------------------------------------------------------
-$color_title: #342d7e;
+
+@import "utils/variables"; 
+@import "utils/colors/colors";
+@import "utils/utils";
+
+$color_title: $verdeAmanda;//#342d7e;
 $color_subtitle: darkslateblue;
 $sidebar_width: 210px;
 
 // Common page elements.
 //------------------------------------------------------------------------------
 .title {
-  border-bottom: 1px gray solid;
   color: $color_title;
   font: {
     size: 17px;
-    weight: bold; };
-  padding-bottom: 2px;
-  margin-top: 6px;
+    weight: bold; 
+  };
+  padding: 0px 0px 10px 0px;
   img {
     position: relative;
-    top: 2px; } }
+    top: 2px; 
+    } 
+}
 
 .title_tools {
   font-size: 12px;
@@ -31,12 +37,49 @@ $sidebar_width: 210px;
     margin-left: 24px;
     display: inline-block;
     vertical-align: top;
+    a{
+      
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+
+      padding: 6px 25px 6px 25px;
+      margin: 0px!important;
+
+      background: $verdeAmanda;
+      font-family: inherit;
+      font-size:15px;
+      font-weight: 400;
+      color:$white;
+      outline: 0px!important;
+      @include rounded-corners (4px);
+      @include transition;
+      &:hover{
+        background:darken($verdeAmanda,10);
+      }
+      &:focus{
+        @include no-shadow;
+      }
+      &:active {
+        outline: 0px!important;
+        background: darken($verdeAmanda,10)!important;
+        color: $white;
+        @include inner-shadow (0,1px,10px,0,0.25);
+        // @include no-shadow;
+      }
+    }
   }
 }
 
 .subtitle {
-  border-bottom: 1px silver solid;
+  border-bottom: 1px solid $silver;
+  padding: 10px 5px 10px 5px!important;
+
   color: #2f2f2f;
+  background:lighten($silver,10);
+  @include round-top-corners(4px);
+
+
   font: {
     size: 14px;
     weight: bold; };
@@ -101,11 +144,8 @@ $sidebar_width: 210px;
 
 .main {
   background: white;
-  padding: 8px 15px 15px 15px;
-  -moz-border-radius: 4px;
-  -moz-box-shadow: 2px 2px 8px #bbbbbb, -2px 0px 8px #bbbbbb;
-  -webkit-border-radius: 4px;
-  -webkit-box-shadow: 2px 2px 8px #bbbbbb, -2px 0px 8px #bbbbbb; }
+  padding: 0px 15px 15px 15px;
+}
 
 .info {
   padding-top: 12px;
@@ -194,36 +234,34 @@ $sidebar_width: 210px;
           margin-left: 5px; } } } } }
 
 .remote {
-  border: 5px lightblue solid;
+  // border: 5px lightblue solid;
   background: whitesmoke;
   margin: 0px;
   padding: 0px 10px 0px 10px;
   position: relative;
   a.close {
-    display: block;
-    background: lightblue;
-    border: {
-      top: 1px gainsboro solid;
-      left: 1px gainsboro solid;
-      bottom: 1px grey solid;
-      right: 1px grey solid; };
-    color: navy;
+    background: $verdeAmanda;
+    color:$white;
+    text-decoration: none;
     cursor: pointer;
-    height: 16px;
-    margin: 3px;
+    padding: 10px 15px 10px 15px;
+    
     position: absolute;
+    display: block;
+    top: 0px;
     right: 0px;
     text-align: center;
-    top: 0px;
-    width: 17px;
+    @include rounded-corners (4px);
     &:hover {
-      background: #1e4262;
+      background:darken($verdeAmanda,10);
       color: white; } } }
 
 .buttonbar {
-  border-top: 1px gray solid;
-  margin: 8px auto;
-  padding-top: 8px; }
+  // border-top: 1px gray solid;
+  // @include dev-borders;
+  
+  padding: 8px 0px 20px 0px; 
+}
 
 .section input, .sidebar input, .inline input,
 .section select, .sidebar select, .inline select,
@@ -436,13 +474,11 @@ $sidebar_width: 210px;
 // Two-row lists.
 //------------------------------------------------------------------------------
 .list {
-  padding: 8px 0px 7px 0px;
   li {
-    border-bottom: 1px silver dotted;
-    color: #3f3f3f;
-    font-size: 12px;
+    color:$chumbo;
     list-style: none;
-    padding: 6px 0px 6px 0px;
+    padding: 12px 5px 12px 5px;
+    border-bottom:1px dotted $silver;
     .gravatar {
       float: left;
       padding: 0px 8px 0px 0px; }
@@ -460,10 +496,10 @@ $sidebar_width: 210px;
   background: snow;
   margin: 0px 0px 12px 0px;
   padding: 6px 8px 6px 8px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-box-shadow: 2px 2px 8px #bbbbbb, -2px 0px 8px #bbbbbb;
-  -webkit-box-shadow: 2px 2px 8px #bbbbbb, -2px 0px 8px #bbbbbb;
+  // -moz-border-radius: 4px;
+  // -webkit-border-radius: 4px;
+  // -moz-box-shadow: 2px 2px 8px #bbbbbb, -2px 0px 8px #bbbbbb;
+  // -webkit-box-shadow: 2px 2px 8px #bbbbbb, -2px 0px 8px #bbbbbb;
 
   .caption {
     border-bottom: 1px grey solid;
@@ -707,7 +743,7 @@ ul.tools {
   background-color: #f2f2f2; }
 
 .highlight:hover {
-  background-color: seashell;
+  background-color: lighten($silver,10);
   .tools {
     visibility: visible; } }
 

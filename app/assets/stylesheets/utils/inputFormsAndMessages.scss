@@ -1,0 +1,209 @@
+@include placeholder-color(darken($silver,10));
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+// .select2-choices,
+.uneditable-input
+{
+  font-size:15px;
+  line-height: 1.3em!important;
+  color:ligthen($chumbo,90)!important;
+  text-decoration: uppercase;
+
+  border:1px solid transparent!important;
+  outline: 0px!important;
+  padding: 10px 10px 10px 10px;
+  
+  @include no-shadow;
+  @include rounded-corners (4px);
+  &:focus {
+    border:1px solid $verdeAmanda!important;
+    background: lighten($yellow,45);
+  }
+}
+select{
+  height: 39px;
+  outline: 0px!important;
+}
+textarea{
+  width: 100%!important;
+  height:inherit;
+}
+input[type="number"]{
+  text-align: right;
+}
+input[type="submit"],
+button
+{
+  cursor: pointer;
+  border: 1px solid transparent;
+
+  padding: 6px 25px 6px 25px;
+  margin: 0px!important;
+
+  background-color: $verdeAmanda;
+  font-family: inherit;
+  font-size:15px;
+  font-weight: 400;
+  color:white;
+  outline: 0px!important;
+  @include rounded-corners (4px);
+  @include transition;
+  &:focus{
+    @include no-shadow;
+  }
+  &:active {
+    outline: 0px!important;
+    background: darken($verdeAmanda,10)!important;
+    color: $white;
+    @include inner-shadow (0,1px,10px,0,0.25);
+    // @include no-shadow;
+  }
+}
+.btn {
+    outline: 0px!important;
+    border:none!important;
+    background: darken($oldMaroon, 10%);
+    height: 48px;
+    font-family: 'Coustard', serif;
+    font-size:1.2em;
+    line-height: 1.3em;
+    text-transform: uppercase;
+    color: $white;
+    @include no-shadow;
+    @include rounded-corners (0px);
+  &:hover,
+  &:focus {
+    background: darken($verdeAmanda,10)!important;
+    color: $white;
+    outline: 0px;
+    @include no-shadow;
+  }
+  // Focus state for keyboard and accessibility
+  &:focus {
+  }
+  // Active state
+  &.active,
+  &:active {
+    @include no-shadow;
+  }
+  // Disabled state
+  &.disabled,
+  &[disabled] {
+  }
+}
+.well {
+  @include rounded-corners (0px);
+  @include no-shadow;
+}
+.error,
+.error-message{
+  font-family:"helveticaneueltstdroman"!important;
+  font-size:15px;
+  line-height: 1.3em!important;
+  color: $red;
+}
+.field_with_errors input,.field_with_errors textarea{
+  @include dev-borders($red);
+}
+.form-error,
+input.form-error{
+  margin-bottom: 3px;
+}
+.message{
+	width: 300px;
+	text-align: center;
+	margin: 18px auto;
+}
+div#flashMessage.message,
+div#authMessage.message{
+	padding: 8px 35px 8px 14px;
+	margin-bottom: 18px;
+	margin-top:18px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	background-color: #fcf8e3;
+	border: 1px solid #fbeed5;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+	color: #3a87ad;	
+}
+div#goodMessage.message{
+	padding: 8px 35px 8px 14px;
+  margin-bottom: 18px;
+  margin-top:18px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  color: #c09853;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+}
+div#badMessage.message{
+	padding: 8px 35px 8px 14px;
+  margin-bottom: 18px;
+  margin-top:18px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  color: #c09853;
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+}
+label{
+  font-weight: bold;
+}
+.required-legend{
+  color:$red;
+  font-size: 0.8em;
+  font-weight: normal;
+
+}
+.required {
+  
+}
+div.input.text.required label{
+  width: 10px;
+  @include dev-borders;
+}
+div.input.text.required label:after{
+  content: " *";
+  color:rgba(221,35,9,1);
+  font-size: 1em;
+  font-weight: normal; 
+  text-align: center;
+}
+.required-sign{
+  // @include dev-borders;
+  width: 4.33333%;
+  float: left;
+  font-family:"helveticaneueltstdroman"!important;
+  font-size:20px;
+  line-height: 1.3em!important;
+  font-weight: bold;
+  text-align: center;
+  color:$red;
+  padding-top: 18px;
+}
